@@ -8,6 +8,7 @@
     <meta name="description" content="Empire Travels and Tour Services">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- css styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <script src="{% static 'js/jquery.js' %}"></script>
     <link href="{% static 'css/bootstrap-theme.min.css' %}" rel="stylesheet">
@@ -23,22 +24,19 @@
 <body onload = "initialize()">
     <!-- HEADER -->
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5">
-                    <div class="dropdownMenus clearfix">
-                    </div><!-- /clearfix -->
-                    <div class="callUsTop">
-                        <div id="logo"><a href="#" title="Travel Booking"><img src="images/logo.png" alt="Travel Booking" /></a></div>
-                    </div><!-- / -->
-                </div><!-- /col -->
-                <div class="col-sm-7">
-                    <div class="col-sm-8">
-                        <span>Tel: <a href="tel:2348053281901" title="(234)-8053281901">(234)-8053281901</a>, <a href="tel:2348023091703" title="(234)-8023091703">(234)-8023091703</a>, <a href="tel:2348185189311" title="(234)-8185189311">(234)-8185189311</a></span>
+        <div class="container-fluid">
+            <div class="row " style="background-color:#4A96AD;margin-top:-5px;width:1100px;height:20px;color:white;margin-bottom:10px;">
+                    <div class="col-sm-offset-2 col-sm-4">
+                        <span>Tel: <a  style="color:white" href="tel:2348053281901" title="(234)-8053281901">(234)-8053281901</a> </span>
                         <div class="topmenu clearfix">
                         </div><!-- /clearfix -->
                     </div><!-- /col -->
-                    <div class="col-sm-4 clearfix">
+                    <div class="col-sm-4">
+                        <span>Email: <a style="color:white"  href="tel:2348053281901" title="(234)-8053281901">ismail@gmail.com</a> </span>
+                        <div class="topmenu clearfix">
+                        </div><!-- /clearfix -->
+                    </div>
+                   <!-- <div class="col-sm-4 clearfix"> 
                         <div class="fRight">
                             <div class="clearfix">
                                 <a href="./login.php">Login</a> &nbsp; | &nbsp;
@@ -51,58 +49,83 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                </div>
+                   </div>-->
             </div>
         </div>
     </header>
-    <!-- MAIN MENU -->
-    <div class="mainMenuContainer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="mainMenu clearfix">
+         <!--menu mn -->
+      <!-- css inline worked here -->
+      <!-- MAIN MENU --> 
+
+
+
+    <div class="mainMenuContainer" style="background-color: white;">
+        <div class="container-fluid" style="background-color: white;">
+            <div class="row" style="background-color: white;">
+                <div class="col-sm-12" style="background-color: white;">
+                    <div class="mainMenu clearfix" style="background-color: white;">
                         <em class="mobDropdown"></em>
-                        <ul>
-                            <li><a href="./index.php" title="Home">Home</a></li>
+                        <ul style="background-color: white;display:inline-block;list-style-type: none;" >
+                            <li ><a style="color:#000000;font-size:15px" href="#" title="Home">Home</a></li>
                             <li>
-                                <a href="#" title="Company">Company</a>
+                                <a style="color:#000000;font-size:15px" href="#" title="Company">Company</a>
                                 <ul>
-                                    <li><a href="./about.php">About Us</a></li>
-                                    <li><a href="./profile.php">Company Profile</a></li>
+                                    <li><a style="color:#000000;font-size:15px" href="{% url 'about_us' %}">About Us</a></li>
+                                    <li><a style="color:#000000;font-size:15px" href="{% url 'profile' %}">Company Profile</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./booking.php" title="Flight/Hotel Booking">Flight/Hotel Booking</a></li>
-                            <li><a href="./training.php" title="Training">Training</a></li>
-                            <li><a href="./package.php" title="Travel Packages">Packages</a></li>
-                            <li><a href="./visa.php" title="Visa">Visa</a></li>
-                            <li><a href="./insurance.php" title="Insurance">Insurance</a></li>
-                            <li><a href="./contact.php" title="Contact Us">Contact</a></li>
+                            <li><a style="color:#000000;font-size:15px" href="./booking.php" title="Flight/Hotel Booking">Flight/Hotel Booking</a></li>
+                            <li><a style="color:#000000;font-size:15px" href="./training.php" title="Training">Training</a></li>
+                            <li><a style="color:#000000;font-size:15px" href="./package.php" title="Travel Packages">Packages</a></li>
+                            <li><a style="color:#000000;font-size:15px" href="./visa.php" title="Visa">Visa</a></li>
+                            <li><a style="color:#000000;font-size:15px" href="./insurance.php" title="Insurance">Insurance</a></li>
+                            <li><a style="color:#000000;font-size:15px" href="./contact.php" title="Contact Us">Contact</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>    <!-- SLIDER -->
+    </div>
+      <!-- end menu mn -->
+    <!-- end alternative menu -->
     <div class="mainSliderContainer">
         <ul id="mainSlider">
             <li>
-                <img src="{% static 'images/slideimage1.png' %}" alt="" />
+                <img src="{% static 'images/1.jpg' %}" alt="" />
             </li>
             <li>
-                <img src="{% static 'images/slideimage2.png' %}" alt="" />
+                <img src="{% static 'images/slideimage1.jpg' %}" alt="" />
             </li>
             <li>
-                <img src="{% static 'images/slideimage3.png' %}" alt="" />
+                <img src="{% static 'images/slideimage2.jpg' %}" alt="" />
             </li>
             <li>
-                <img src="{% static 'images/main-slider-2.png' %}" alt="" />
+                <img src="{% static 'images/slideimage3.jpg' %}" alt="" />
+            </li>
+            <li>
+                <img src="{% static 'images/main-slider-2.jpg' %}" alt="" />
             </li>
         </ul>
         <div class="mainSliderNav"></div>
         
     </div><!-- /mainSliderContainer -->
-    <!-- MAIN CONTENT -->
+    
+
+
+
+
+
+
+
+
+
+{% block content %}
+
+
+
+
+
+<!-- MAIN CONTENT -->
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
@@ -114,29 +137,49 @@
                             <a class="btn btn-white btn-ghost mt10" href="./home.php"><i class="fa fa-angle-right"></i> Read More</a>
                     </div>
                 </div><!-- /row -->
-                <!-- FEATURED PACKAGES  -->
-                <div class="row">
-                    <div class="innerTitle"><h2>FEATURED <span>PACKAGES</span></h2></div>
-                    <div class="featuredOffers offers">
-                     
-                        
-                    </div><!-- /featuredOffers -->
-                </div><!-- /row -->
             </div><!-- /col -->
-            <div class="col-sm-4">
-                <!-- LATEST NEWS -->
-<div class="innerTitle"><h2>LATEST <span>NEWS</span></h2></div>
-<div class="newsList">                     
-            <div class="alert alert-danger">Sorry! There are no News record available yet.</div>
-          
-</div>                             </div><!-- /col -->
+           </div> 
         </div><!-- /row -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div><!-- /container -->
     <!-- FOOTER -->
     <div id="footer">
         <div class="footerTop">
             <div class="container">
-                <div class="row">
+                <div class="row" >
                     <div class="col-sm-4">
                         <h5><span>EMPIRE TRAVEL SERVICES LIMITED</span></h5>
                         <p>No. 3, Bompai Road, Opposite Central Hotel,</p>
@@ -147,7 +190,7 @@
                         <p>Web:  www.empiretravelkano.com.ng</p>
                     </div>
                     <div class="col-md-4 text-center"  >
-                    <p><img src="images/iata.png" alt="IATA"> </p>
+                    <p><img src="{% static 'images/iata.png' %}" alt="IATA"> </p>
                     </div>
                     <div class="col-sm-4">
                         <h5>Customer <span>Support</span></h5>
@@ -169,7 +212,7 @@
                     <div class="col-sm-6">
                         <div class="footerMenu clearfix">
                             <ul>
-                                <li><a href="./index.php" title="Home">Home</a></li>
+                                <li><a href="#" title="Home">Home</a></li>
                                 <li><a href="./about.php" title="About Us">About Us</a></li>
                                 <li><a href="./package.php" title="Packages">Packages</a></li>
                                 <li><a href="./visa.php" title="Visa">Visa</a></li>
@@ -208,4 +251,3 @@
     <script src="{% static 'js/global.js' %}"></script>
 
 </body>
-</html>
